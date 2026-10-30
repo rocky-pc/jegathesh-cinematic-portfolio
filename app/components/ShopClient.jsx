@@ -1,0 +1,7 @@
+"use client";
+import { useState } from "react";
+export default function ShopClient(){
+ const [cart,setCart]=useState([]);
+ const products=[["Gaming Pad","Tech Gadget Pro.webp"],["Wireless Headphones","Wireless Headphones.webp"],["Smart Watch","Smart Watch.jpg"],["Laptop Stand","laptop stand.jpg"],["Gaming Mouse","Gaming Mouse.avif"],["Bluetooth Speaker","Bluetooth Speaker.webp"]];
+ return <main className="commerce-page shop-page"><header className="commerce-nav"><a href="/">← Portfolio</a><a href="/login">Account</a><a href="/orders">My orders</a></header><section className="shop-hero"><div><span className="kicker">THE JEGATHESH EDIT / 001</span><h1>Useful things.<br/><em>Good design.</em></h1><p>A small curated storefront for everyday tech essentials.</p></div></section><section className="product-grid">{products.map(([name,file],i)=><article className="product-card" key={name}><div className="product-image"><img src={"https://raw.githubusercontent.com/rocky-pc/Portfolio-main/main/src/images/"+encodeURIComponent(file).replace(/%2F/g,"/")} alt={name}/></div><div className="product-details"><h3>{name}</h3><b>₹1.00</b></div><button className="product-add" onClick={()=>setCart(c=>[...c,name])}>ADD TO BAG <span>+</span></button></article>)}</section><p className="shop-note">Demo products · ₹1 test prices · {cart.length} item(s) in your bag</p><footer className="commerce-footer"><span>J. / STORE</span><a href="/">Back to portfolio ↗</a></footer></main>;
+}
