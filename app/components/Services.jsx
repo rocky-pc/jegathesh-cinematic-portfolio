@@ -1,0 +1,10 @@
+import { ArrowUpRight, Braces, Cloud, Globe2, ShoppingCart, Smartphone, Workflow } from "lucide-react";
+const services=[
+ {n:"01",icon:Braces,title:"Web Applications",desc:"Fast, responsive web platforms with thoughtful UX, secure APIs and maintainable architecture.",tags:["React / Next.js","Python APIs","Dashboards"]},
+ {n:"02",icon:Smartphone,title:"Mobile App Development",desc:"Cross-platform mobile apps built to feel native, from the first screen to store publication.",tags:["Flutter","Android & iOS","App publishing"]},
+ {n:"03",icon:Cloud,title:"Hosting & Deployment",desc:"Get your product online with reliable deployment, domain setup, SSL and practical support.",tags:["Vercel / Netlify","AWS","Domain & SSL"]},
+ {n:"04",icon:Workflow,title:"Business Automation",desc:"Replace repetitive manual work with focused internal tools, workflow systems and integrations.",tags:["Admin tools","Automation","Integrations"]},
+ {n:"05",icon:Globe2,title:"UI & Website Revamp",desc:"Modernise an existing website with a cleaner visual system, better performance and mobile-first design.",tags:["Landing pages","Responsive UI","Performance"]},
+ {n:"06",icon:ShoppingCart,title:"E-commerce Solutions",desc:"Product catalogues, cart flows and payment-ready storefront experiences for growing businesses.",tags:["Product pages","Checkout","Order flows"]}
+];
+export default function Services(){return <section className="section services-section" id="services"><div className="section-head reveal"><div><span className="kicker">04 / WHAT I CAN DO</span><h2>Ideas into <em>digital products.</em></h2></div><span className="side-note">Practical engineering.<br/>Polished experiences.</span></div><div className="service-grid">{services.map(s=><article className="service-card reveal" key={s.n}><div className="service-top"><span>/{s.n}</span><s.icon size={25}/></div><h3>{s.title}</h3><p>{s.desc}</p><div className="service-tags">{s.tags.map(t=><span key={t}>{t}</span>)}</div><a href="mailto:sjega82@gmail.com?subject=Project%20enquiry" aria-label={"Enquire about "+s.title}><ArrowUpRight size={18}/></a></article>)}</div></section>}
