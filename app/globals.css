@@ -58,3 +58,7 @@
  .animated-name{animation:none}.typing-caret{animation:none}.hero-scroll svg{animation:none}
  .reveal{opacity:1;transform:none;transition:none}.ticker div{animation:none}
 }
+
+/* Keep the shader above the hero base and beneath the text/grid layers. */
+.hero.hero-composed .shader-bg{z-index:0}
+.hero.hero-composed .hero-grid{z-index:1}
