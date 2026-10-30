@@ -20,7 +20,8 @@ export default function OrderSuccessClient(){
     const data=await res.json();if(!res.ok||!data.success)throw new Error(data.error||"Payment is not marked as paid.");
     if(cancelled)return;
     setStatus("success");setMessage("Your payment has been verified. Thank you for your order.");
-    const unsubscribe=onAuthStateChanged(auth,async user=>{
+    let unsubscribe=()=>{};
+    unsubscribe=onAuthStateChanged(auth,async user=>{
      unsubscribe();
      if(user&&!localStorage.getItem("savedOrder:"+orderId)){
       try{await addDoc(collection(db,"orders"),{userId:user.uid,orderId,cart:order.cart,address:order.address,total:order.total,timestamp:new Date(),status:"confirmed"});localStorage.setItem("savedOrder:"+orderId,"true");}
