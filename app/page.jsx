@@ -38,7 +38,7 @@ export default function Home(){
   return ()=>observer.disconnect();
  },[]);
  return <main>
-<header className="nav"><a className="brand" href="#home" aria-label="Jegathesh home">J<span>.</span></a><nav className={menu?"navlinks open":"navlinks"}><a href="#work" onClick={()=>setMenu(false)}>Work</a><a href="#about" onClick={()=>setMenu(false)}>About</a><a href="#skills" onClick={()=>setMenu(false)}>Skills</a><a href="#services" onClick={()=>setMenu(false)}>Services</a><a href="/shop">Shop</a><a href="/login">Login</a><a href="#contact" onClick={()=>setMenu(false)}>Contact</a></nav><a className="navcta" href="mailto:sjega82@gmail.com">Let’s talk <ArrowUpRight size={16}/></a><button className="menubtn" aria-label="Toggle menu" onClick={()=>setMenu(!menu)}>{menu?<X/>:<Menu/>}</button></header>
+<header className="nav"><a className="brand" href="#home" aria-label="Jegathesh home">J<span>.</span></a><nav className={menu?"navlinks open":"navlinks"}><a href="#work" onClick={()=>setMenu(false)}>Work</a><a href="#about" onClick={()=>setMenu(false)}>About</a><a href="#skills" onClick={()=>setMenu(false)}>Skills</a><a href="#services" onClick={()=>setMenu(false)}>Services</a><a href="#explorations" onClick={()=>setMenu(false)}>Explorations</a><a href="/shop">Shop</a><a href="/login">Login</a><a href="#contact" onClick={()=>setMenu(false)}>Contact</a></nav><a className="navcta" href="mailto:sjega82@gmail.com">Let’s talk <ArrowUpRight size={16}/></a><button className="menubtn" aria-label="Toggle menu" onClick={()=>setMenu(!menu)}>{menu?<X/>:<Menu/>}</button></header>
 <section className="hero hero-composed" id="home">
  <ShaderBackground/>
  <div className="hero-grid"></div>
